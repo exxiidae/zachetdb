@@ -17,7 +17,7 @@
 
 ## Ссылки
 
-- **Репозиторий**: 
+- **Репозиторий**: https://github.com/exxiidae/zachetdb
 - **Документация API**: https://apibase-omay.onrender.com/docs#/
 
 ## Зависимости

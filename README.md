@@ -17,8 +17,8 @@
 
 ## Ссылки
 
-- **Репозиторий**: https://github.com/Q-A-D/fastapi-blog-project  
-- **Документация API**: https://fastapi-blog-project-zl2b.onrender.com/docs  
+- **Репозиторий**: 
+- **Документация API**: 
 
 ## Зависимости
 

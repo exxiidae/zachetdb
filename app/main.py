@@ -1,14 +1,3 @@
-<<<<<<< HEAD:app/main.py
-from fastapi import FastAPI
-from . import database, models
-from .routers import authors, posts
-
-models.Base.metadata.create_all(bind=database.engine)
-
-app = FastAPI(title="Blog App")
-app.include_router(authors.router, prefix="/api/v1", tags=["authors"])
-app.include_router(posts.router, prefix="/api/v1", tags=["posts"])
-=======
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
@@ -41,4 +30,3 @@ async def read_root(request: Request):
 @app.get("/health")
 async def health_check():
     return {"status": "healthy", "message": "API is running"}
->>>>>>> 324a53ccf75dda0454576a9710b48c51f9ad0566:zachetdb/app/main.py

@@ -1,6 +1,8 @@
 from pydantic import BaseModel
-from typing import Optional
+from datetime import datetime
+from typing import Optional, List
 
+# ===== СХЕМЫ ДЛЯ АВТОРОВ =====
 class AuthorBase(BaseModel):
     name: str
     email: str
@@ -8,10 +10,13 @@ class AuthorBase(BaseModel):
 class AuthorCreate(AuthorBase):
     pass
 
-class AuthorResponse(AuthorBase):
+class Author(AuthorBase):
     id: int
+    created_at: datetime
+
     class Config:
-        from_attributes = True
+        from_attributes = True  
+
 
 class PostBase(BaseModel):
     title: str
@@ -21,7 +26,10 @@ class PostBase(BaseModel):
 class PostCreate(PostBase):
     pass
 
-class PostResponse(PostBase):
+class Post(PostBase):
     id: int
+    created_at: datetime
+    author: Optional[Author] = None  
+
     class Config:
         from_attributes = True

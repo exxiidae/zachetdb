@@ -24,7 +24,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-from routers import authors, posts
+from .routers import authors, posts
 
 app.include_router(authors.router, prefix="/api/v1", tags=["authors"])
 app.include_router(posts.router, prefix="/api/v1", tags=["posts"])
